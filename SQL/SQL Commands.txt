@@ -1,0 +1,47 @@
+SQL COMMANDS FOR PROJECT RENTKARO --------->
+
+Database:
+create database rentkaro;
+use rentkaro;
+
+************************************************************
+
+Category Table:
+INSERT INTO `category`(id,category_id,category) VALUES (1,'auto','automobiles'),(2,'elec','electronics'),(3,'fur','furniture');
+
+************************************************************
+
+City Table:
+INSERT INTO `city`(id,city_id,city) VALUES (1,'blr','bangalore'),(2,'hyd','hyderabad'),(3,'pun','pune');
+
+************************************************************
+
+Renter Table:
+INSERT INTO renter (renter_address, renter_contact, renter_email, renter_gender, renter_id, renter_name, renter_password, renter_rating)
+SELECT customer_address, customer_contact, customer_email, customer_gender, customer_id, customer_name, customer_password, 5
+FROM customer;
+
+************************************************************
+
+Product Table:
+INSERT INTO `product`(`id`,`product_id`,`product_name`,`product_category`,`product_subcategory`,`product_description`,`product_quantity`,`product_price`,`product_availability`,`product_image`,`renter_id`,`category_id`,`city_id`)
+VALUES
+    (1,'p1','MahindraScorpio','automobiles','car','Front and Rear Power Windows, Driver and Passenger Airbags, ABS, Yes ABS, Central Locking, Yes Central Locking, Front Fog Lamps, Child Safety Lock, Yes Child Safety Lock, Adjustable headlamps',3,50000,1,'https://github.com/demanda1/Project/blob/master/images/mahindra-scorpio1.png?raw=true','1','1','1'),
+    (4,'p7','Bajaj Pulsar','automobiles','bikes','150cc, Self start, 60kmpl milleage, latest model with digital dashboard',6,8000,1,'https://github.com/demanda1/Project/blob/master/images/bajaj-pulsar3.png?raw=true','2','1','1'),
+    (7,'p8','Honda Activa','automobiles','bikes','Self start, 64kmpl milleage, latest model with digital dashboard',4,6000,1,'https://github.com/demanda1/Project/blob/master/images/honda-activa1.png?raw=true','3','1','2'),
+    (10,'p9','Bajaj-Pulsar-100','automobiles','bikes','Carburetor Fuel System, Single Channel ABS, Halogen Head Lamp, Alloy Wheels, Tubeless Tyre',3,8000,1,'https://github.com/demanda1/Project/blob/master/images/advertize/Bajaj-Pulsar1.jpg?raw=true','3','1','3'),
+    (13,'p10','Bajaj-Pulsar-200','automobiles','bikes','Carburetor Fuel System, Single Channel ABS, Halogen Head Lamp, Alloy Wheels, Tubeless Tyre',3,8000,1,'https://github.com/demanda1/Project/blob/master/images/advertize/bajaj-pulsar2.jpg?raw=true','2','1','2'),
+
+    (2,'p2','RoyalMaharajBed','furniture','Bed','Maharaja Bed high quality teak & hand made carving, made by processed teak wood, 5 layer high quality polish, nut bolts fitting - easy to move, hydraulic box, ISI mark 18mm ply wood, 5 drawers + 2 lockers, 6x6ft',3,10000,1,'https://github.com/demanda1/Project/blob/master/images/beds.png?raw=true','2','3','2'),
+    (5,'p5','Rocking Chair','furniture','chairs','Comfortable, Strong, Wodden Chair . With Cussions on the back support.',6,500,1,'https://github.com/demanda1/Project/blob/master/images/chair.png?raw=true','1','3','2'),
+    (8,'p28','aladdin carpet ','furniture','carpets','Carburetor Fuel System, Single Channel ABS, Halogen Head Lamp, Alloy Wheels, Tubeless Tyre',3,3000,1,'https://github.com/demanda1/Project/blob/master/images/icons/carpet.png?raw=true','1','3','1'),
+    (11,'p29','ginn carpet ','furniture','carpets','Carburetor Fuel System, Single Channel ABS, Halogen Head Lamp, Alloy Wheels, Tubeless Tyre',3,3000,1,'https://github.com/demanda1/Project/blob/master/images/icons/carpet2.png?raw=true','2','3','3'),
+    (14,'p30','Royal carpet ','furniture','carpets','Carburetor Fuel System, Single Channel ABS, Halogen Head Lamp, Alloy Wheels, Tubeless Tyre',3,3000,1,'https://github.com/demanda1/Project/blob/master/images/icons/carpet3.jpg?raw=true','3','3','3'),
+
+    (3,'p3','Microwave Oven','electronics','homeappliance','28L Capacity: Can be used for baking along with grilling, reheating, defrosting and cooking.Touch Key Pad (Membrane) is sensitive to touch and easy to clean,Also included in the box: User manual, warranty card',4,2000,1,'https://github.com/demanda1/Project/blob/master/images/oven.png?raw=true','3','2','3'),
+    (6,'p4','Mi Tv','electronics','homeappliance','Smart TV Full HD Display, 1980x1080p , slim, plastic body, with 3 USB Ports and Dolby Digital Sound .',3,3500,1,'https://github.com/demanda1/Project/blob/master/images/mitv.png?raw=true','1','2','3'),
+    (9,'p6','Samsung Washing Machine','electronics','homeappliances','25kg capacity, Fully automated, wash rince dryer, with Silver Sanitazation and Odour Removal Technology',5,200,1,'https://github.com/demanda1/Project/blob/master/images/washingmachine.png?raw=true','2','2','3'),
+    (12,'p41','Deep-Fridge ','electronics','refrigerator','Carburetor Fuel System, Single Channel ABS, Halogen Head Lamp, Alloy Wheels, Tubeless Tyre',3,5000,1,'https://github.com/demanda1/Project/blob/master/images/icons/deepfridge2.png?raw=true','3','2','2'),
+    (15,'p42','Whirlpool Fridge 100','electronics','refrigerator','Carburetor Fuel System, Single Channel ABS, Halogen Head Lamp, Alloy Wheels, Tubeless Tyre',3,5000,1,'https://github.com/demanda1/Project/blob/master/images/icons/fridge1.png?raw=true','2','2','2');
+
+************************************************************
